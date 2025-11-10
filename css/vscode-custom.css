@@ -1,0 +1,10 @@
+/* Increase sidebar/explorer font size */
+.monaco-list .monaco-icon-label {
+  font-size: 14px !important;
+}
+
+/* Increase file/folder icons */
+.monaco-icon-label:before {
+  font-size: 18px !important;
+}
+
