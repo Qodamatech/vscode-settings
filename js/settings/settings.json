@@ -1,0 +1,73 @@
+{
+  // THEME & ICONS
+  "workbench.iconTheme": "material-icon-theme", //Must be installed
+  "workbench.productIconTheme": "jetbrains-idea-product-icon-theme", //Must be installed
+  "redhat.telemetry.enabled": true,
+
+  // EXPLORER DECORATIONS: keep badges, disable red/green tinting so folder-path-color wins
+  "explorer.decorations.colors": true,
+  "explorer.decorations.badges": true,
+  // CUSTOM COLOR SLOTS FOR Folder Path Color (Must be installed)
+  "workbench.colorCustomizations": { 
+    "folderPathColor.custom1": "#4CAF50", // test green
+    "folderPathColor.custom2": "#2196F3", // native-test blue
+    "folderPathColor.custom3": "#FFC107", // build yellow
+    "folderPathColor.custom4": "#80D8FF", // kotlin/java light blue
+    "folderPathColor.custom5": "#c286f9", // kotlin/java light blue
+    "folderPathColor.custom6": "#f48e09" // kotlin/java light blue
+  },
+  // INTELLIJ-LIKE FOLDER HIGHLIGHTS (Folder Path Color) (Must be installed)
+  "folder-path-color.folders": [
+    {
+      "path": "src/test",
+      "color": "custom1",
+      "symbol": "🧪",
+      "tooltip": "Test Sources"
+    },
+    {
+      "path": "src/native-test",
+      "color": "custom2",
+      "symbol": "🧪",
+      "tooltip": "Native Tests"
+    },
+    {
+      "path": "build",
+      "color": "custom3",
+      "symbol": "🛠",
+      "tooltip": "Build Output"
+    },
+    {
+      "path": ".idea",
+      "color": "custom6",
+      "symbol": "🛠",
+      "tooltip": "Build Output"
+    },
+    {
+      "path": ".gradle",
+      "color": "custom3",
+      "symbol": "🛠",
+      "tooltip": "Build Output"
+    },
+    {
+      "path": "src/main/java",
+      "color": "custom4",
+      "symbol": "📘",
+      "tooltip": "Java Sources"
+    },
+    {
+      "path": "src/main/kotlin",
+      "color": "custom5",
+      "symbol": "📘",
+      "tooltip": "Kotlin Sources"
+    }
+  ],
+  "explorer.compactFolders": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "editor.fontSize": 13,
+  "terminal.integrated.fontSize": 13,
+  "workbench.tree.indent": 20,
+  "vscode_custom_css.imports": [
+    "file:///Users/amirnajmi/Library/Application Support/Windsurf/User/vscode-custom.css",
+    "file:///Users/amirnajmi/Library/Application Support/Windsurf/User/vscode-custom.js"
+  ]
+}
