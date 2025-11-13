@@ -5,11 +5,12 @@
 
   // Color configuration matching IntelliJ classpath coloring
   const folderColors = {
-    'test': 'rgba(4, 223, 106, 0.15)',      // Green for test
-    'native-test': 'rgba(4, 223, 106, 0.15)', // Green for native-test
+    'test': 'rgba(6, 224, 108, 0.13)',      // Green for test
+    'native-test': 'rgba(4, 223, 106, 0.13)', // Green for native-test
     'main': 'rgba(4, 160, 243, 0.1)',       // Blue for main
-    'src': 'rgba(4, 160, 243, 0.1)',        // Blue for src
-    'build': 'rgba(255, 204, 0, 0.15)'      // Yellow for build
+    'src': 'rgba(4, 159, 243, 0.03)',        // Blue for src
+    'build': 'rgba(255, 204, 0, 0.08)',      // Yellow for build
+    'target': '#ffcc0012'      // Yellow for build
   };
 
   // Track which rows are under which parent folders
