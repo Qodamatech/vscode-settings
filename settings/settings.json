@@ -3,36 +3,30 @@
     "workbench.iconTheme": "vsc-jetbrains-icons-enhanced",
     "workbench.colorTheme": "Default Light Modern",
     "redhat.telemetry.enabled": true,
-    
     // TOOLS
     "vs-kubernetes": {
         "vscode-kubernetes.helm-path-mac": "/Users/amirnajmi/.vs-kubernetes/tools/helm/darwin-arm64/helm"
     },
-    
     // EXPLORER SETTINGS
     "explorer.decorations.colors": true,
     "explorer.decorations.badges": true,
     "explorer.compactFolders": false,
-    
     // CUSTOM COLOR SLOTS (IntelliJ-inspired palette)
     "workbench.colorCustomizations": {
         // Source folders
-        "folderPathColor.custom1": "#4CAF50",  // Test - Green
-        "folderPathColor.custom2": "#00BCD4",  // Native test - Cyan
-        "folderPathColor.custom3": "#67c4eb",  // Java - Light blue
-        "folderPathColor.custom4": "#c286f9",  // Kotlin - Purple
-        "folderPathColor.custom5": "#FF6B35",  // Resources - Orange
-        
+        "folderPathColor.custom1": "#4CAF50", // Test - Green
+        "folderPathColor.custom2": "#00BCD4", // Native test - Cyan
+        "folderPathColor.custom3": "#045b80df", // Java - Light blue
+        "folderPathColor.custom4": "#c286f9", // Kotlin - Purple
+        // "folderPathColor.custom5": "#ff6b35d5", // Resources - Orange
         // Build/Config folders
-        "folderPathColor.custom6": "#FFC107",  // Build - Yellow
-        "folderPathColor.custom7": "#FF9800",  // Gradle/Maven - Orange
-        "folderPathColor.custom8": "#9E9E9E",  // IDE config - Gray
-        
+        "folderPathColor.custom6": "#987408", // Build - Yellow
+        "folderPathColor.custom7": "#FF9800", // Gradle/Maven - Orange
+        "folderPathColor.custom8": "#9E9E9E", // IDE config - Gray
         // Other
-        "folderPathColor.custom9": "#E91E63",  // Generated - Pink
-        "folderPathColor.custom10": "#607D8B"  // Docs - Blue gray
+        "folderPathColor.custom9": "#E91E63", // Generated - Pink
+        "folderPathColor.custom10": "#607D8B" // Docs - Blue gray
     },
-    
     // INTELLIJ-LIKE FOLDER HIGHLIGHTS
     "folder-path-color.folders": [
         // ===== SOURCE FOLDERS =====
@@ -50,11 +44,10 @@
         },
         {
             "path": "src/main/resources",
-            "color": "custom5",
+            // "color": "custom5",
             "symbol": "📦",
             "tooltip": "Resource Files"
         },
-        
         // ===== TEST FOLDERS =====
         {
             "path": "src/test/java",
@@ -86,7 +79,6 @@
             "symbol": "⚡",
             "tooltip": "Native Test Sources"
         },
-        
         // ===== BUILD FOLDERS =====
         {
             "path": "build",
@@ -118,7 +110,6 @@
             "symbol": "⚙️",
             "tooltip": "Generated Sources (Maven)"
         },
-        
         // ===== BUILD TOOL CONFIG =====
         {
             "path": ".gradle",
@@ -138,7 +129,6 @@
             "symbol": "📦",
             "tooltip": "Maven Local Repository"
         },
-        
         // ===== IDE CONFIG =====
         {
             "path": ".idea",
@@ -152,7 +142,6 @@
             "symbol": "⚙️",
             "tooltip": "VS Code Configuration"
         },
-        
         // ===== DOCUMENTATION =====
         {
             "path": "docs",
@@ -167,16 +156,17 @@
             "tooltip": "Documentation"
         }
     ],
-    
     // JAVA SETTINGS
     "java.configuration.updateBuildConfiguration": "interactive",
     "java.compile.nullAnalysis.mode": "automatic",
     "java.jdt.ls.lombokSupport.enabled": true,
-    
     // CUSTOM CSS/JS
     "vscode_custom_css.imports": [
         "file://${userHome}/.vscode/my-configs/css/vscode-custom.css",
         "file://${userHome}/.vscode/my-configs/js/vscode-custom.js"
     ],
-    "vscode_custom_css.policy": true
+    "vscode_custom_css.policy": true,
+    "workbench.tree.renderIndentGuides": "none",
+    "workbench.tree.enableStickyScroll": false
+
 }
