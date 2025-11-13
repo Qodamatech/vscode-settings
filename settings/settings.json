@@ -1,38 +1,182 @@
 {
-  // THEME & ICONS
-  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
-  "workbench.productIconTheme": "jetbrains-idea-product-icon-theme",
-  "redhat.telemetry.enabled": true,
-
-  // TOOLS
-  "vs-kubernetes": {
-    "vscode-kubernetes.helm-path-mac": "/Users/amirnajmi/.vs-kubernetes/tools/helm/darwin-arm64/helm"
-  },
-
-  // EXPLORER DECORATIONS: keep badges, disable red/green tinting so folder-path-color wins
-  "explorer.decorations.colors": true,
-  "explorer.decorations.badges": true,
-
-  // CUSTOM COLOR SLOTS FOR Folder Path Color
-  "workbench.colorCustomizations": {
-    "folderPathColor.custom1": "#4CAF50",  // test green
-    "folderPathColor.custom2": "#2196F3",  // native-test blue
-    "folderPathColor.custom3": "#FFC107",  // build yellow
-    "folderPathColor.custom4": "#80D8FF", // kotlin/java light blue
-    "folderPathColor.custom5": "#c286f9",   // kotlin/java light blue
-    "folderPathColor.custom6": "#f48e09"   // kotlin/java light blue
-  },
-
-  // INTELLIJ-LIKE FOLDER HIGHLIGHTS (Folder Path Color)
-  "folder-path-color.folders": [
-    { "path": "src/test",        "color": "custom1", "symbol": "🧪", "tooltip": "Test Sources" },
-    { "path": "src/native-test", "color": "custom2", "symbol": "🧪", "tooltip": "Native Tests" },
-    { "path": "build",              "color": "custom3", "symbol": "🛠", "tooltip": "Build Output" },
-    { "path": ".idea",              "color": "custom6", "symbol": "🛠", "tooltip": "Build Output" },
-    { "path": ".gradle",              "color": "custom3", "symbol": "🛠", "tooltip": "Build Output" },
-    { "path": "src/main/java",        "color": "custom4", "symbol": "📘", "tooltip": "Java Sources" },
-    { "path": "src/main/kotlin",      "color": "custom5", "symbol": "📘", "tooltip": "Kotlin Sources" }
-  ],
-  "java.configuration.updateBuildConfiguration": "interactive",
-  "java.compile.nullAnalysis.mode": "automatic"
+    "workbench.productIconTheme": "jetbrains-idea-product-icon-theme",
+    "workbench.iconTheme": "vsc-jetbrains-icons-enhanced",
+    "workbench.colorTheme": "Default Light Modern",
+    "redhat.telemetry.enabled": true,
+    
+    // TOOLS
+    "vs-kubernetes": {
+        "vscode-kubernetes.helm-path-mac": "/Users/amirnajmi/.vs-kubernetes/tools/helm/darwin-arm64/helm"
+    },
+    
+    // EXPLORER SETTINGS
+    "explorer.decorations.colors": true,
+    "explorer.decorations.badges": true,
+    "explorer.compactFolders": false,
+    
+    // CUSTOM COLOR SLOTS (IntelliJ-inspired palette)
+    "workbench.colorCustomizations": {
+        // Source folders
+        "folderPathColor.custom1": "#4CAF50",  // Test - Green
+        "folderPathColor.custom2": "#00BCD4",  // Native test - Cyan
+        "folderPathColor.custom3": "#67c4eb",  // Java - Light blue
+        "folderPathColor.custom4": "#c286f9",  // Kotlin - Purple
+        "folderPathColor.custom5": "#FF6B35",  // Resources - Orange
+        
+        // Build/Config folders
+        "folderPathColor.custom6": "#FFC107",  // Build - Yellow
+        "folderPathColor.custom7": "#FF9800",  // Gradle/Maven - Orange
+        "folderPathColor.custom8": "#9E9E9E",  // IDE config - Gray
+        
+        // Other
+        "folderPathColor.custom9": "#E91E63",  // Generated - Pink
+        "folderPathColor.custom10": "#607D8B"  // Docs - Blue gray
+    },
+    
+    // INTELLIJ-LIKE FOLDER HIGHLIGHTS
+    "folder-path-color.folders": [
+        // ===== SOURCE FOLDERS =====
+        {
+            "path": "src/main/java",
+            "color": "custom3",
+            "symbol": "☕",
+            "tooltip": "Java Source Files"
+        },
+        {
+            "path": "src/main/kotlin",
+            "color": "custom4",
+            "symbol": "💜",
+            "tooltip": "Kotlin Source Files"
+        },
+        {
+            "path": "src/main/resources",
+            "color": "custom5",
+            "symbol": "📦",
+            "tooltip": "Resource Files"
+        },
+        
+        // ===== TEST FOLDERS =====
+        {
+            "path": "src/test/java",
+            "color": "custom1",
+            "symbol": "🧪",
+            "tooltip": "Java Test Sources"
+        },
+        {
+            "path": "src/test/kotlin",
+            "color": "custom1",
+            "symbol": "🧪",
+            "tooltip": "Kotlin Test Sources"
+        },
+        {
+            "path": "src/test/resources",
+            "color": "custom1",
+            "symbol": "🧪",
+            "tooltip": "Test Resources"
+        },
+        {
+            "path": "src/test",
+            "color": "custom1",
+            "symbol": "🧪",
+            "tooltip": "Test Sources"
+        },
+        {
+            "path": "src/native-test",
+            "color": "custom2",
+            "symbol": "⚡",
+            "tooltip": "Native Test Sources"
+        },
+        
+        // ===== BUILD FOLDERS =====
+        {
+            "path": "build",
+            "color": "custom6",
+            "symbol": "🏗️",
+            "tooltip": "Build Output (Excluded)"
+        },
+        {
+            "path": "target",
+            "color": "custom6",
+            "symbol": "🏗️",
+            "tooltip": "Maven Build Output (Excluded)"
+        },
+        {
+            "path": "out",
+            "color": "custom6",
+            "symbol": "🏗️",
+            "tooltip": "Output Directory (Excluded)"
+        },
+        {
+            "path": "build/generated",
+            "color": "custom9",
+            "symbol": "⚙️",
+            "tooltip": "Generated Sources"
+        },
+        {
+            "path": "target/generated-sources",
+            "color": "custom9",
+            "symbol": "⚙️",
+            "tooltip": "Generated Sources (Maven)"
+        },
+        
+        // ===== BUILD TOOL CONFIG =====
+        {
+            "path": ".gradle",
+            "color": "custom7",
+            "symbol": "🐘",
+            "tooltip": "Gradle Configuration (Excluded)"
+        },
+        {
+            "path": "gradle",
+            "color": "custom7",
+            "symbol": "🐘",
+            "tooltip": "Gradle Wrapper"
+        },
+        {
+            "path": ".m2",
+            "color": "custom7",
+            "symbol": "📦",
+            "tooltip": "Maven Local Repository"
+        },
+        
+        // ===== IDE CONFIG =====
+        {
+            "path": ".idea",
+            "color": "custom8",
+            "symbol": "⚙️",
+            "tooltip": "IntelliJ IDEA Config (Excluded)"
+        },
+        {
+            "path": ".vscode",
+            "color": "custom8",
+            "symbol": "⚙️",
+            "tooltip": "VS Code Configuration"
+        },
+        
+        // ===== DOCUMENTATION =====
+        {
+            "path": "docs",
+            "color": "custom10",
+            "symbol": "📖",
+            "tooltip": "Documentation"
+        },
+        {
+            "path": "documentation",
+            "color": "custom10",
+            "symbol": "📖",
+            "tooltip": "Documentation"
+        }
+    ],
+    
+    // JAVA SETTINGS
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.jdt.ls.lombokSupport.enabled": true,
+    
+    // CUSTOM CSS/JS
+    "vscode_custom_css.imports": [
+        "file://${userHome}/.vscode/my-configs/css/vscode-custom.css",
+        "file://${userHome}/.vscode/my-configs/js/vscode-custom.js"
+    ],
+    "vscode_custom_css.policy": true
 }
